@@ -1,13 +1,12 @@
 #' @title Run the DCQC reviewing app
-#' @description The SORTEE DCQC reviewing app allows data editors to review papers accroding to the SORTEE guidelines.
-#' @return A PDF of the review
+#' @description The SORTEE DCQC reviewing app allows data editors to review papers according to the SORTEE guidelines.
+#' @return A .rtf of the DCQC review
 #' @export
 
-shinyDCQC <- function() {
-    # pass data.str into shiny environment
+SORTEE.DCQC <- function() {
     shiny_env <- 1
     envir <- as.environment(shiny_env)
 
-    appDir <- system.file("shinyDCQC", package = "shinyDCQC")
+    appDir <- system.file("SORTEE.DCQC", package = "SORTEE.DCQC")
     shiny::runApp(appDir, display.mode = "normal")
   }

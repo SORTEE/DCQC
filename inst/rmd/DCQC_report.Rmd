@@ -1,8 +1,8 @@
 ---
-title: "DCQC Quality Checklist Report"
+title: "SORTEE DCQC Quality Checklist Report"
 author: "`r params$reviewer_name`"
 date: "`r format(params$report_date, '%d %B %Y')`"
-output: rtf_document
+output: pdf_document
 params:
   paper_title: "Example Paper"
   reviewer_name: "Example Reviewer"
