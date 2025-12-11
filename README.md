@@ -1,16 +1,16 @@
 ## Installation
-Currently the shinyDCQC package is not on CRAN, but you can install the development version from GitHub using the devtools package:
+Currently the SORTEE.DCQC package is not on CRAN, but you can install the development version from GitHub using the devtools package:
 
 ```{r}
 install.packages("devtools")
-devtools::install_github("EIvimeyCook/shinyDCQC")
-library(shinyDCQC)
+devtools::install_github("EIvimeyCook/SORTEE.DCQC")
+library(SORTEE.DCQC)
 ```
 
-## Running shinyDCQC
-The only function metRscreen is shinyDCQC().
+## Running SORTEE.DCQC
+The only function metRscreen is SORTEE.DCQC().
 
 ```{r}
-library(shinyDCQC)
-shinyDCQC()
+library(SORTEE.DCQC)
+SORTEE.DCQC()
 ```
