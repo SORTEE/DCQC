@@ -7,6 +7,6 @@ SORTEEDCQC <- function() {
     shiny_env <- 1
     envir <- as.environment(shiny_env)
 
-    appDir <- system.file("SORTEE.DCQC", package = "SORTEE.DCQC")
+    appDir <- system.file("SORTEEDCQC", package = "SORTEEDCQC")
     shiny::runApp(appDir, display.mode = "normal")
   }
