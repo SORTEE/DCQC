@@ -59,7 +59,7 @@ ui <- function() {
       create_card("5", "Data metadata present and adequate"),
       br(),
       div(id = "comments_1",
-          h4("Addtional comments")
+          h4("Additional comments")
       ),
       create_card_comment("1a", "Comments"),
       br(),
@@ -70,7 +70,7 @@ ui <- function() {
       create_card("6", "The structure and contents of the archived data files must match the description in the manuscript"),
       br(),
       div(id = "comments_2",
-          h4("Addtional comments")
+          h4("Additional comments")
       ),
       create_card_comment("2a", "Comments"),
       br(),
@@ -89,7 +89,7 @@ ui <- function() {
       create_card("11", "Code metadata present and adequate"),
       br(),
       div(id = "comments_3",
-          h4("Addtional comments")
+          h4("Additional comments")
       ),
       create_card_comment("3a", "Comments"),
       br(),
@@ -100,7 +100,7 @@ ui <- function() {
       create_card("12", "The structure and content of the archived code must match the description of data filtering, processing, and analysis, and the presentation of results in the manuscript."),
       br(),
       div(id = "comments_4",
-          h4("Addtional comments")
+          h4("Additional comments")
       ),
       create_card_comment("4a", "Comments"),
       br(),
@@ -111,7 +111,7 @@ ui <- function() {
       create_card("13", "Code must be able to run without error using the archived data. With the exception of easy to fix file path errors, all errors should be addressed by the author."),
       br(),
       div(id = "comments_5",
-          h4("Addtional comments")
+          h4("Additional comments")
       ),
       create_card_comment("5a", "Comments"),
       br(),
@@ -124,7 +124,7 @@ ui <- function() {
       create_card("15", "Figures"),
       br(),
       div(id = "comments_6",
-          h4("Addtional comments")
+          h4("Additional comments")
       ),
       create_card_comment("6a", "Comments"),
       br(),
