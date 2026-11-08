@@ -35,7 +35,7 @@ The checklist contains **15 items** grouped into six stages. Stages are selected
 | **5** | Archived code runs with the archived data | 13 |
 | **6** | Results can be computationally reproduced by running the archived code | 14–15 |
 
-Stages 1 and 3 cover accessibility in an open repository with a persistent DOI, licensing, completeness, interoperable (non-proprietary) file formats, and adequate metadata. Stages 2 and 4 check correspondence between what is archived and what the manuscript claims. Stages 5 and 6 cover execution and computational reproducibility of numeric results and figures, with an option to record the tolerance applied — for example the percentage discrepancy measure of [Hardwicke *et al.* (2021)](https://doi.org/10.1098/rsos.201494).
+Stages 1 and 3 cover accessibility in an open repository (with a permanent DOI for data and a stable link or identifier for code), licensing, completeness, interoperable (non-proprietary) file formats, and adequate metadata. Stages 2 and 4 check correspondence between what is archived and what the manuscript claims. Stages 5 and 6 cover execution and computational reproducibility of numeric results and figures. In Stage 6, any tolerance applied should be noted in the item's comment box — for example the percentage discrepancy measure of [Hardwicke *et al.* (2021)](https://doi.org/10.1098/rsos.201494).
 
 ## Installation
 
@@ -48,12 +48,9 @@ devtools::install_github("SORTEE/DCQC")
 
 ### Additional requirements
 
-Export renders an R Markdown template to PDF, which needs **Pandoc** and a **LaTeX** distribution in addition to the declared package dependencies:
+Export renders an R Markdown template to PDF. `rmarkdown` is installed with the package, but it also needs **Pandoc** and a **LaTeX** distribution. Pandoc is bundled with RStudio; outside RStudio, install it from https://pandoc.org/installing.html. If you do not already have LaTeX:
 
 ```r
-install.packages("rmarkdown")
-
-# If you do not already have LaTeX installed:
 install.packages("tinytex")
 tinytex::install_tinytex()
 ```
@@ -82,11 +79,11 @@ The exported report is generated from `inst/rmd/DCQCreport.Rmd` and contains:
 - Manuscript title, journal, reviewer name, and report date
 - One section per answered checklist item, with the guideline text, the Yes/No response, and the reviewer's comment (or *"No comment provided."*)
 
-Items belonging to unselected stages, and items left unanswered, are omitted rather than reported as failures.
+Items belonging to unselected stages, and items with no Yes/No selected, are omitted rather than reported as failures. A comment on an item with no Yes/No selected is not included in the report, so set the toggle for every item you comment on.
 
 ## Dependencies
 
-`bslib`, `shiny`, `shinyalert`, `shinyjs`, `shinyWidgets`, `tippy` (declared), plus `rmarkdown` and a LaTeX engine at export time.
+`bslib`, `rmarkdown`, `shiny`, `shinyalert`, `shinyjs`, `shinyWidgets` (declared in `DESCRIPTION`), plus Pandoc and a LaTeX engine at export time.
 
 ## Contributing
 
